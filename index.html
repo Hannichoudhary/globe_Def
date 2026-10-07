@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest Atlas — Digital Monitoring of Deforestation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="globe-container"></div>
+
+    <div class="topbar">
+        <div class="brand">
+            <span class="brand-dot"></span>
+            FOREST ATLAS
+        </div>
+
+        <div class="top-title">
+            DIGITAL MONITORING OF DEFORESTATION
+        </div>
+
+        <button class="home-button" id="homeButton">
+            <span>⌂</span> HOME
+        </button>
+    </div>
+
+    <div class="intro-screen" id="introScreen">
+        <div class="intro-content">
+            <div class="eyebrow">A GLOBAL ENVIRONMENTAL ATLAS</div>
+
+            <h1>
+                FORESTS ARE<br>
+                <span>CHANGING.</span>
+            </h1>
+
+            <p>
+                Explore documented deforestation cases around the world.
+                Select a marker on the globe to investigate what changed,
+                why it happened, and what could help protect the forest.
+            </p>
+
+            <button class="explore-button" id="exploreButton">
+                EXPLORE THE GLOBE
+                <span>→</span>
+            </button>
+        </div>
+
+        <div class="intro-footer">
+            <span>12 DOCUMENTED LOCATIONS</span>
+            <span>DRAG TO ROTATE • CLICK A MARKER TO INVESTIGATE</span>
+        </div>
+    </div>
+
+    <div class="location-panel" id="locationPanel">
+
+        <div class="panel-header">
+            <div>
+                <div class="location-number" id="locationNumber">01 / 13</div>
+                <div class="location-region" id="locationRegion">INDIA</div>
+            </div>
+
+            <button class="close-button" id="closeButton">×</button>
+        </div>
+
+        <div class="panel-content">
+
+            <div class="location-heading">
+                <div class="country-label" id="countryLabel">CHHATTISGARH, INDIA</div>
+                <h2 id="locationName">Hasdeo-Arand</h2>
+                <div class="coordinates" id="coordinates">
+                    22.60° N / 82.60° E
+                </div>
+            </div>
+
+            <div class="image-section">
+
+                <div class="image-box">
+                    <div class="image-label">EARLIER</div>
+                    <img id="beforeImage" src="" alt="">
+                    <div class="image-placeholder" id="beforePlaceholder">
+                        <span>SATELLITE IMAGE</span>
+                        <small>ADD BEFORE IMAGE</small>
+                    </div>
+                </div>
+
+                <div class="image-box">
+                    <div class="image-label">LATER</div>
+                    <img id="afterImage" src="" alt="">
+                    <div class="image-placeholder" id="afterPlaceholder">
+                        <span>SATELLITE IMAGE</span>
+                        <small>ADD AFTER IMAGE</small>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="research-grid">
+
+                <section class="research-section">
+                    <div class="section-tag">01 / WHAT HAPPENED</div>
+                    <h3>What changed?</h3>
+                    <p id="whatHappened"></p>
+                </section>
+
+                <section class="research-section">
+                    <div class="section-tag">02 / WHY IT HAPPENED</div>
+                    <h3>The pressure behind the loss</h3>
+                    <p id="whyItHappened"></p>
+                </section>
+
+                <section class="research-section impact-section">
+                    <div class="section-tag">03 / WHY IT MATTERS</div>
+                    <h3>The wider impact</h3>
+                    <p id="impact"></p>
+                </section>
+
+                <section class="research-section save-section">
+                    <div class="section-tag">04 / LOOKING FORWARD</div>
+                    <h3>How could it be protected?</h3>
+                    <p id="prevention"></p>
+                </section>
+
+            </div>
+
+            <div class="source-box">
+                <div>
+                    <span class="source-title">RESEARCH BASIS</span>
+                    <span id="sourceText"></span>
+                </div>
+            </div>
+
+            <div class="panel-navigation">
+                <button class="nav-button" id="previousButton">
+                    ← PREVIOUS
+                </button>
+
+                <button class="next-button" id="nextButton">
+                    NEXT LOCATION →
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="location-count" id="locationCount">
+        <span id="markerCount">08</span>
+        LOCATIONS
+    </div>
+
+    <div class="instruction" id="instruction">
+        DRAG THE GLOBE TO EXPLORE
+    </div>
+
+    <script src="https://unpkg.com/globe.gl"></script>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
